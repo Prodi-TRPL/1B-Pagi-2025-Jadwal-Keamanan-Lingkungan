@@ -1,1 +1,430 @@
+:root {
+  --Text4: #1A4D2E;
+  --Hover1: #6F936C;
+  --Hover2: #A6B37D;
+}
 
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+/* Body */
+body {
+  background: url('../Asset/Image/Background00.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "inter", "sans";
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--Text4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  color: white;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  font-weight: bold;
+  font-family: 'Orbiga';
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-left .profile-icon img {
+  height: 40px;
+  width: 40px;
+}
+
+.profile-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 28px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  gap: 10px;
+}
+
+.profile-icon p {
+  font-size: 28px;
+  padding-top: 8px;
+  margin: 0;
+  color: white;
+}
+
+.navbar-right .unselected {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar-right .unselected:hover {
+  color: #B7E4C7;
+}
+
+.selected {
+  background-color: white;
+  color: #1A4D2E;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  padding: 12px 20px;
+  cursor: default;
+}
+
+/* Layout */
+.main-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  padding: 20px 40px;
+}
+
+/* Welcome */
+.welcome {
+  color: var(--Text4);
+  font-size: 28px;
+  font-weight: bold;
+  padding: 20px 40px 0;
+}
+
+/* Cards */
+.card {
+  background-color: var(--Text4);
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+}
+
+/* Laporan carousel */
+.laporan-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.laporan-list {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.laporan-card {
+  min-width: 340px;
+  height: 140px;
+  background-color: #4F6F52;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.prev-btn,
+.next-btn {
+  background-color: #4F6F52;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 22px;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: var(--Hover2);
+}
+
+/* Jadwal */
+.jadwal-list {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.hari {
+  background-color: #4F6F52;
+  padding: 12px 0;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.hari:hover {
+  background-color: var(--Hover1);
+}
+
+/* Status keamanan */
+.status-keamanan {
+  background-color: var(--Text4);
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.status-circle {
+  width: 180px;
+  height: 180px;
+  border: 35px solid #5ff397;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.status-text {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.ubah-btn {
+  background-color: #4F6F52;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Popup */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-card {
+  background-color: #E8DFCA;
+  color: var(--Text4);
+  border-radius: 15px;
+  padding: 30px;
+  width: 350px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn .3s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Popup ubah status */
+.status-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.status-option {
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.status-option:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.aman {
+  background-color: #00ff40;
+  color: #1A4D2E;
+}
+
+.waspada {
+  background-color: #fffb00;
+  color: #1A4D2E;
+}
+
+.bahaya {
+  background-color: #ff0000;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content h1 {
+  color: var(--Text4);
+}
+
+
+.popup-content {
+  background: var(--Text2);
+  color: var(--Text1);
+  padding: 40px;
+  border-radius: 8px;
+  width: 70%;
+  height: 85%;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+}
+
+.popup-container p {
+  text-align: justify;
+  font-weight: 100;
+}
+
+.date-time {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.popup-leftcontainer img {
+  width: 100%;
+  height: 350px;
+  border-radius: 6px;
+}
+
+#map {
+  width: 100%;
+  height: 350px;
+  border-radius: 6px;
+  display: none;
+}
+
+
+.popup-leftcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.buttons button {
+  height: 40px;
+  width: 180px;
+  border-radius: 6px;
+  border: 2px solid var(--Text4);
+  background-color: var(--Text2);
+  color: var(--Text4);
+  font-family: 'inter', sans-serif;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.buttons button:hover {
+  background-color: var(--Text4);
+  color: var(--Text2);
+}
+
+.buttons .active {
+  background-color: var(--Text4);
+  color: var(--Text2);
+  cursor: default;
+}
+
+.popup-rightcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 20px;
+}
+
+.popup-rightcontainer p {
+  font-weight: 10;
+
+}
+
+.Title {
+  font-size: 20px;
+}
+
+.close-btn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  color: #1A4D2E;
+  transition: .1s ease;
+}
+
+.close-btn:hover {
+  scale: 1.5;
+}

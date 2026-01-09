@@ -1,0 +1,1011 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html {
+  overflow-y: hidden;
+}
+
+body {
+  background: url('../Asset/Image/Background00.png');
+  font-family: "inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #E8DFCA;
+  color: white;
+}
+
+
+
+/* Navbar */
+
+.selected {
+  background-color: white;
+  color: #1A4D2E;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  padding: 12px 20px;
+  cursor: default;
+
+}
+
+.navbar {
+  background-color: #1A4D2E;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: "Orbiga";
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.profile-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 28px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  gap: 10px;
+}
+
+.profile-icon p {
+  font-size: 28px;
+  padding-top: 8px;
+  margin: 0;
+  color: white;
+}
+
+.navbar-left h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar-right .unselected {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar-right .unselected:hover {
+  color: #B7E4C7;
+}
+
+/* Layout utama */
+.main-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  padding: 20px 40px;
+}
+
+/* Kiri */
+.left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.welcome {
+  font-size: 30px;
+  font-weight: 700;
+  width: auto;
+  padding: 10px 40px;
+  color: var(--Text4);
+  margin-top: 20px;
+}
+
+/* Card umum */
+.card {
+  background-color: #1A4D2E;
+  border-radius: 20px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Laporan warga */
+.laporan-list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.laporan-card {
+  background-color: #4F6F52;
+  border-radius: 15px;
+  width: 220px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.next-btn {
+  background-color: #4F6F52;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 24px;
+  width: 40px;
+  height: 80px;
+  cursor: pointer;
+}
+
+.next-btn:hover {
+  background-color: #4F6F52;
+}
+
+/*Jadwal Ronda*/
+.jadwal-list {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.hari {
+  background-color: #4F6F52;
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 15px;
+  font-weight: 600;
+}
+
+.petugas-list {
+  background-color: #d28a55;
+  padding: 12px 0;
+  border-radius: 15px;
+  font-weight: 400;
+}
+
+/*Stats Keamanan*/
+.status-keamanan {
+  background-color: #1A4D2E;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.status-circle {
+  width: 120px;
+  height: 120px;
+  border: 40px solid #5ff397;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4F6F52;
+  margin: 20px 0;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.status-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.ubah-btn {
+  background-color: #4F6F52;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ubah-btn:hover {
+  background-color: #703b18;
+}
+
+/*Data Warga page*/
+.data-warga-page {
+  background-image: url(bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/*Laporan Kejadian*/
+.main-content {
+  display: flex;
+  gap: 40px;
+  padding: 20px 40px;
+}
+
+.h2 {
+  font-size: 30px;
+  font-weight: 700;
+  width: auto;
+  padding: 10px 40px;
+  color: var(--Text4);
+}
+
+/* Laporan Kejadian */
+.laporan-kejadian {
+  border-radius: 20px;
+  margin: 30px;
+  backdrop-filter: blur(2px);
+  font-family: 'inter', sans-serif;
+}
+
+.laporan-kejadian h2 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 70%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  font-size: 14px;
+}
+
+
+
+
+.add-btn {
+  background-color: var(--Text4);
+  color: var(--Text2);
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+
+.add-btn:hover {
+  scale: 1.1;
+  background-color: #0f4114;
+  color: white;
+  font-weight: bolder;
+}
+
+.popup-form {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-15%);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.form-content {
+  background: #E8DFCA;
+  padding: 25px;
+  border-radius: 10px;
+  width: 380px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: SlideDown 0.3s ease forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto;
+  color: var(--Text4);
+}
+
+.form-content h2 {
+  color: var(--Text4);
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--Text4);
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-content input {
+  width: 350px;
+  padding: 10px;
+  margin-right: 20px;
+  margin: 8px 0 15px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.Form p {
+  color: black;
+  font-size: small;
+}
+
+.Form select {
+  background-color: var(--Hover2);
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: lighter;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 10px;
+}
+
+.lct-btn {
+  background-color: var(--Text4);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+  margin-bottom: 10px;
+}
+
+.lct-btn:hover {
+  background-color: var(--Text3);
+}
+
+.save-btn {
+  background-color: var(--Text4);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.save-btn:hover {
+  background-color: var(--Text3);
+}
+
+@keyframes SlideDown {
+  from {
+    transform: translateY(-30px)
+  }
+
+  to {
+    transform: translateY(0)
+  }
+}
+
+
+
+
+
+.tabel-warga {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0, 1);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.tabel-warga th {
+  padding: 12px;
+  text-align: left;
+  color: var(--Text2);
+  font-weight: bolder;
+}
+
+.tabel-warga td {
+  padding: 12px;
+  text-align: left;
+  color: #fff;
+}
+
+.aksi-btn {
+  justify-content: space-between;
+  align-items: center
+}
+
+.tabel-warga thead {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tabel-warga tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tabel-warga tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0, 15);
+}
+
+/* --- TOMBOL UNDUH --- */
+.download-btn {
+  background-color: var(--Text2);
+  color: var(--Text4);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bolder;
+  transition: .1s ease;
+}
+
+.download-btn:hover {
+  scale: 1.1;
+  background-color: blue;
+  color: white;
+
+}
+
+/* --- TOMBOL STATUS (Persetujuan) --- */
+.persetujuan-btn {
+  background-color: var(--Text2);
+  color: var(--Text4);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bolder;
+  transition: .1s ease;
+}
+
+.persetujuan-btn,
+.penolakan-btn {
+  margin-left: 5px;
+}
+
+.persetujuan-btn:hover {
+  scale: 1.1;
+}
+
+/* --- TOMBOL STATUS (Penolakan) --- */
+.penolakan-btn {
+  background-color: var(--Text2);
+  color: var(--Text4);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bolder;
+  transition: .1s ease;
+}
+
+.penolakan-btn:hover {
+  scale: 1.1;
+  background-color: red;
+  color: white;
+}
+
+.FirstLayer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 20px;
+  padding: 30px;
+}
+
+.MonthPicker {
+  width: 160px;
+  max-height: 470px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding: 10px;
+
+}
+
+.MonthPicker button {
+  background-color: var(--Text4);
+  color: var(--Text2);
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: .1s ease;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'inter', sans-serif;
+}
+
+.MonthPicker button:hover {
+  scale: 1.1;
+  background-color: #11311e;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* Status */
+.kanan1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.kanan1 button {
+  background-color: var(--Text2);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-family: 'inter', sans-serif;
+  font-size: 14px;
+  transition: .1s ease;
+  cursor: pointer;
+}
+
+.kanan1 button:hover {
+  scale: 1.1;
+}
+
+.status-circle {
+  width: 200px;
+  height: 200px;
+  border: 50px solid #5ff397;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  transition: .3s ease;
+  padding: 0;
+  margin-top: 40px;
+  font-weight: 800;
+}
+
+.StatusContainer {
+  background-color: var(--Text4);
+  padding: 30px 60px;
+  border-radius: 12px;
+}
+
+.status-info {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 3px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.6;
+  width: 70%;
+  color: var(--Secondary);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  font-size: medium;
+}
+
+.status-info i {
+  margin-right: 8px;
+  color: #90ee90;
+}
+
+.update-time {
+  font-size: 12px;
+  color: var(--Main);
+  margin-top: 10px;
+}
+
+
+.status-circle.aman {
+  animation: pulseGreen 2.5s infinite;
+}
+
+@keyframes pulseGreen {
+  0% {
+    box-shadow: 0 0 0 0 rgba(95, 243, 151, 0.6);
+  }
+
+  70% {
+    box-shadow: 0 0 0 12px rgba(95, 243, 151, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(95, 243, 151, 0);
+  }
+}
+
+.LineGraph,
+.LineGraph1,
+.LineGraph2,
+.LineGraph3 {
+  width: 90%;
+  max-width: 800px;
+  background: var(--Text4);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.SecondLayer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 20px;
+  padding: 30px;
+  justify-content: space-between;
+}
+
+.ThirdLayer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 20px;
+  padding: 30px;
+  justify-content: space-between;
+}
+
+.Unduh {
+  width: 35%;
+  border: 4px solid rgb(0, 132, 255);
+  border-radius: 12px;
+  background-color: rgba(0, 132, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 132, 255);
+  cursor: pointer;
+  transition: .1s ease;
+}
+
+.Unduh:hover {
+  background-color: rgb(0, 132, 255);
+  color: var(--Text2);
+}
+
+.grafik-laporan {
+  padding: 20px;
+  background: var(--Text2);
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+  justify-content: center;
+  width: 60%;
+}
+
+.grafik-laporan select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: none;
+  border: 1px solid var(--Text1);
+  color: var(--Text1);
+  outline: none;
+}
+
+.grafik-laporan h2 {
+  color: #ffffff;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+canvas {
+  width: 100% !important;
+  height: 380px !important;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Container tiap grafik */
+.chart-container {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  background: var(--Text4);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.03);
+  transition: 0.2s ease;
+}
+
+.chart-container:hover {
+  transform: scale(1.01);
+}
+
+.download-btn {
+  margin-left: 10px;
+  background: #0099ff;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  float: right;
+}
+
+.download-btn:hover {
+  background: #007acc;
+}
+
+.laporan-kejadian {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.laporan {
+  width: 40%;
+  padding: 30px;
+  background-color: var(--Text2);
+  border-radius: 15px;
+  color: var(--Text1);
+}
+
+.laporan select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: none;
+  border: 1px solid var(--Text1);
+  color: var(--Text1);
+  outline: none;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.search-input {
+  border: 1px solid var(--Text1);
+}
+
+.popup-detail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.detail-card {
+  background: white;
+  width: 75%;
+  max-width: 950px;
+  padding: 30px;
+  border-radius: 15px;
+  position: relative;
+  animation: fadeIn 0.2s ease;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.detail-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.detail-time {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.detail-wrapper {
+  display: flex;
+  gap: 25px;
+}
+
+.detail-left {
+  width: 45%;
+  text-align: center;
+}
+
+.detail-image {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.detail-tabs {
+  display: flex;
+  margin-top: 12px;
+  gap: 10px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #2a5d2a;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab-btn.active {
+  background: #2a5d2a;
+  color: white;
+}
+
+.detail-right {
+  width: 55%;
+  font-size: 17px;
+}
+
+.location-box {
+  background: #f3f3f3;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.disabled-btn {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Container kiri */
+.laporan-container {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Title bar */
+.laporan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.laporan-header a {
+  color: #2B7A0B;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.laporan-header a:hover {
+  text-decoration: underline;
+}
+
+/* Dropdown */
+.laporan-filter select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  font-size: 14px;
+  background: #fff;
+}
+
+/* Tabel */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.data-table th {
+  background: #eaf7e0;
+  color: #2B7A0B;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.data-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Kolom */
+.data-table td:nth-child(1) {
+  width: 200px;
+}
+
+.data-table td:nth-child(2) {
+  width: 150px;
+}
+
+.data-table td:nth-child(3) {
+  width: 120px;
+}
+
+.data-table td:nth-child(4) {
+  width: 80px;
+}
+
+/* Tombol Detail */
+.btn-detail {
+  background: #2B7A0B;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-detail:hover {
+  background: #1e5c07;
+}

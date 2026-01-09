@@ -1,0 +1,744 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Orbiga";
+    user-select: none;
+}
+
+html {
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'inter', sans-serif;
+}
+
+.Navbar {
+    background-color: var(--Main-Transparent);
+    padding: 1rem 0;
+    color: var(--Secondary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.Navbar .Nav-Links li {
+  margin: 10px;
+}
+
+.Navbar .Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.LogoContainer {
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding-left: 20px;
+}
+
+.Navbar .LogoText {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    font-size: 25px;
+    font-family: "Orbiga";
+    letter-spacing: 4px;
+    text-decoration: none;
+    color: var(--Text2);
+    gap: 15px;
+
+}
+
+.Navbar .LogoText .Logo{
+    text-decoration: none;
+    font-size: 20px;
+    height: 48px;
+    width: 48px;
+    float: left;
+}
+
+.Navbar .Nav-Links {
+    list-style: none;
+    display: flex;
+} 
+
+.Navbar .Nav-Links a {
+    color: var(--Text2);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    transition: all 0.3s;
+
+}
+
+.Navbar .Nav-Links a:hover {
+    background-color: var(--Text2);
+    color: var(--Text4);
+    border-radius: 20px;
+}
+
+.ScrolledNavbar {
+    background-color: var(--Main);
+}
+
+main {
+    position: absolute;
+    transform: translateY(-4%);
+    display: flex;
+    width: 1400px;
+    flex-direction: column;
+    gap: 20px;
+    left: -20px;
+}
+
+.Beranda {
+    background: url('../Asset/Image/Background02.png');
+    height: 720px;
+    width: 1400px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: space-between;
+}
+
+.Beranda .Container {
+    display: flex;
+    height: 100%;
+    align-items: center;    
+    gap: 40px;
+}
+
+.ContainerText {
+    height: 100%;
+    align-content: center;
+    margin-left: 80px;
+}
+
+.ContainerText h2 {
+    color: var(--Text2);
+    font-size: 37px;
+    font-weight: 100;
+    font-family: "Orbiga";
+    cursor: default;
+}
+
+.ContainerText h1 {
+    color: var(--Text2);
+    font-size: 260px;
+    font-weight: 200;
+    font-family: "Pohon";
+    line-height: 0.8em;
+    cursor: default;
+}
+
+.Tentang {
+    background-color: var(--Secondary);
+    height: 720px;
+    width: 1400px;
+    display: flex;
+}
+
+.Tentang .Container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.Tentang h2 {
+    padding-left: 30px;
+    padding-top: 20px;
+    font-family: "Orbiga";
+    font-size: 60px;
+    color: var(--Text4);
+}
+
+.Tentang .ContainerTentang {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContainerTentang .ContainerText {
+    width: 800px;
+    height: 500px;
+    background-color: var(--Text4);
+    margin: 0 20px;
+    border-radius: 20px;
+    padding: 20px;
+    
+}
+
+.ContainerTentang button {
+    margin: 0;
+    width: 60px;
+    height: 60px;
+}
+
+.Layanan {
+    background: url('../Asset/Image/Background03.png') center center/cover no-repeat;
+    height: 720px;
+    width: 1400px;
+    display: flex;
+}
+
+.Layanan .Container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.carousel-slide p{
+  font-family: 'inter', sans-serif;
+  color: var(--Text1);
+}
+
+.Layanan h2 {
+    padding-left: 30px;
+    padding-top: 20px;
+    font-family: "Orbiga";
+    font-size: 60px;
+    color: var(--Text2);
+}
+
+.Feature-Box {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    margin-bottom: 20px;
+    margin-right: 30px;
+}
+
+.Feature {
+    background-color: var(--Text4);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 30%;
+    height: 490px;
+    box-shadow: inset;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+hr {
+    width: 100%;
+}
+
+.Feature p {
+    text-align: justify;
+    color: var(--Text2);
+    font-family: 'inter', sans-serif;
+}
+
+.Feature h3 {
+    font-family: "Orbiga";
+    font-size: 24px;
+    color: var(--Text2);
+}
+
+.Feature img {
+    width: 250px;
+    height: 250px;
+    transition: all .2s;
+}
+
+.img1:hover,
+.img2:hover,
+.img3:hover {
+    scale: 1.1;
+    left: -4;
+    cursor: pointer;
+    transform: rotate(10deg);
+}
+
+
+.ViewButton1,
+.ViewButton2,
+.ViewButton3 {
+    color: var(--Main);
+    background:none;
+    width: 50%;
+    height: 40%;
+    border-radius: 10px;
+    border: none;
+    font-family: "Orbiga";
+    font-size: 20px;
+    transition: all .2s;
+}
+
+.img1:hover + .ViewButton1 {
+    color: var(--Text2);
+}
+
+.img2:hover + .ViewButton2 {
+    color: var(--Text2);
+}
+
+.img3:hover + .ViewButton3 {
+    color: var(--Text2);
+}
+
+.Kontak {
+    background-color: var(--Text4);
+    height: 340px;
+    width: 1400px;
+    padding: 40px 40px;
+    color: var(--Text2);
+}
+
+.Kontak .Container {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+
+}
+
+.ContainerAtas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: auto;
+    justify-items: space-between;
+}
+
+.ContainerBawah {
+    width: auto;
+    height: 100px;
+    text-align: center;
+    align-content: end;
+}
+
+.fa-brands {
+    font-size: 40px;
+    color: var(--Text2);
+    margin-top: 14px;
+    transition: all .2s;
+}
+
+.fa-brands:hover {
+    color: var(--Text3);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.AlamatDesc {
+    font-size: 20px;
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
+    gap: 20px;
+}
+
+.Navi-Links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+.Navi-Links li a {
+    color: var(--Text2);
+    transition: all .2s;
+}
+
+.Navi-Links li a:hover {
+    color: var(--Text3);
+}
+
+.Container h3 {
+    margin-bottom: 14px;
+}
+
+.LogoTextImg {
+  height: 80px;
+}
+
+.Carousel {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 40px auto 0;
+      overflow: hidden;
+      border-radius: 20px;
+      background: #f8f8f8;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .Carousel-Inner {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .Carousel-Item {
+      min-width: 100%;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .Carousel-Item img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .Carousel-Item h3 {
+      font-size: 24px;
+      color: #1a4d2e;
+      margin-bottom: 10px;
+    }
+
+    .Carousel-Item p {
+      font-size: 16px;
+      color: #333;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .Carousel-Buttons {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 20px;
+    }
+
+    .Carousel-Buttons button {
+      background: #1a4d2e;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .Carousel-Buttons button:hover {
+      background: #163e24;
+      transform: scale(1.05);
+    }
+
+    .Dots {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .Dots span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ccc;
+      margin: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .Dots .active {
+      background: #1a4d2e;
+      width: 20px;
+      border-radius: 5px;
+    }
+
+    .Tentang {
+      background-color: #f2e9d8;
+    }
+
+    .Tentang h2 {
+      font-size: 60px;
+      padding-top: 20px;
+      margin-bottom: 40px;
+      color: #1A4D2E;
+    }
+
+    /* Carousel Container */
+    .carousel {
+      position: relative;
+      width: 80%;
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: c;
+    }
+
+    .carousel-track-container {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    .carousel-slide img {
+      width: 400px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .carousel-slide h3 {
+      font-size: 1.5rem;
+      color: #1A4D2E;
+      margin-bottom: 10px;
+    }
+
+    .carousel-slide p {
+      color: #333;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    /* Buttons */
+    .carousel-btn {
+      background: #1A4D2E;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .carousel-btn.prev {
+      left: 20px;
+    }
+
+    .carousel-btn.next {
+      right: 20px;
+    }
+
+    .carousel-btn:hover {
+      background: #25683f;
+    }
+
+    /* Nav dots */
+    .carousel-nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 10px;
+    }
+
+    .carousel-nav button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background-color: #ccc;
+      cursor: pointer;
+    }
+
+    .carousel-nav .current-slide {
+      background-color: #1A4D2E;
+    }
+
+@media (max-width: 1400px) {
+  main {
+    width: 100%;
+    padding: 0 20px;
+    transform: none;
+    position: relative;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  /* Navbar */
+  .Navbar .Nav-Links {
+    gap: 5px;
+  }
+
+  /* Beranda */
+  .Beranda {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .ContainerText {
+    margin-left: 0;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .ContainerText h1 {
+    font-size: 160px;
+  }
+
+  /* Tentang */
+  .Tentang {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .ContainerTentang {
+    flex-direction: column;
+  }
+
+  .ContainerTentang .ContainerText {
+    width: 90%;
+    height: auto;
+  }
+
+  /* Layanan */
+  .Layanan {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .Feature-Box {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .Feature {
+    width: 45%;
+    height: auto;
+  }
+
+  /* Kontak */
+  .ContainerAtas {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .Navbar .Nav-Links {
+    display: none; /* siap hamburger */
+  }
+
+  /* Beranda */
+  .ContainerText h1 {
+    font-size: 100px;
+    line-height: 1;
+  }
+
+  .ContainerText h2 {
+    font-size: 24px;
+  }
+
+  /* Tentang */
+  .Tentang h2,
+  .Layanan h2 {
+    font-size: 40px;
+    padding-left: 20px;
+  }
+
+  /* Feature */
+  .Feature {
+    width: 100%;
+  }
+
+  .Feature img {
+    width: 180px;
+    height: auto;
+  }
+
+  /* Carousel */
+  .carousel,
+  .Carousel {
+    width: 100%;
+  }
+
+  .carousel-slide img {
+    width: 260px;
+  }
+
+  .carousel-btn,
+  .Carousel-Buttons {
+    display: none;
+  }
+
+  /* Kontak */
+  .Kontak {
+    height: auto;
+  }
+
+  .ContainerAtas {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .ContainerText h1 {
+    font-size: 72px;
+  }
+
+  .ContainerText h2 {
+    font-size: 20px;
+  }
+
+  .Tentang h2,
+  .Layanan h2 {
+    font-size: 32px;
+  }
+
+  .AlamatDesc {
+    font-size: 16px;
+  }
+
+  .fa-brands {
+    font-size: 30px;
+  }
+}
+
+

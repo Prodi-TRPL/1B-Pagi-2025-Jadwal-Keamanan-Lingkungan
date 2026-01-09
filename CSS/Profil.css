@@ -1,0 +1,368 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+  }
+
+  body {
+    background-image: url('../Asset/Image/Background00.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "inter", "sans";
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+  }
+
+
+  /* Navbar */
+  .selected {
+    background-color: white;
+    color: #1A4D2E;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    padding: 12px 20px;
+    cursor: default;
+
+  }
+
+  .navbar {
+    background-color: var(--Text4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-family: 'Orbiga';
+  }
+
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: bold;
+  }
+
+  .navbar-left .profile-icon img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .profile-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    gap: 10px;
+  }
+
+  .profile-icon p {
+    padding-top: 8px;
+  }
+
+  .navbar-right .unselected {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+
+  .navbar-right .unselected:hover {
+    color: #B7E4C7;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+  }
+
+  .hamburger span {
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    margin: 3px 0;
+    transition: 0.3s;
+  }
+
+  .section {
+    justify-items: center;
+    margin: 40px;
+  }
+
+  .container1 {
+    width: 100%;
+  }
+
+  .profil-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .profil-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .profil-avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: var(--Text2);
+    color: var(--Text4);
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profil-text h2 {
+    font-size: 44px;
+    font-weight: 600;
+    color: var(--Text2);
+  }
+
+  .profil-text p {
+    font-size: 20px;
+    color: var(--Secondary);
+  }
+
+  .detail-grid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .detail-grid-new {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .detail-card {
+    border: 2px solid var(--Secondary);
+    border-radius: 10px;
+    padding: 15px;
+    background-color: var(--Text2);
+  }
+
+  .detail-card p:first-child {
+    font-size: 18px;
+    color: var(--Text3);
+  }
+
+  .detail-card p:last-child {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 5px;
+    color: var(--Text1);
+  }
+
+  .security {
+    margin-top: 20px;
+    border: 2px solid var(--Secondary);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: var(--Text2);
+  }
+
+  .actions {
+    margin-top: 25px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .actions button {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .security button {
+    background: none;
+    color: var(--Secondary);
+    height: 40px;
+    width: 40px;
+    font-size: 24px;
+    padding: 0;
+    transition: .15s;
+    border: none;
+  }
+
+  .security button:hover {
+    font-size: 32px;
+    color: var(--Text4);
+  }
+
+  .Upper {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--Text1);
+  }
+
+  .Lower {
+    font-size: 15px;
+    color: var(--Text3);
+  }
+
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    margin-top: 40px;
+    padding: 10px;
+  }
+
+  .actions .logout {
+    color: var(--Text2);
+    background-color: red;
+    margin-left: auto;
+    font-size: 18px;
+    transition: .15s;
+    border: none;
+  }
+
+  .actions .logout:hover {
+    color: var(--Text2);
+    background-color: red;
+    margin-left: auto;
+    font-size: 19px;
+  }
+
+
+  .swal-pass-popup .swal-pass {
+    width: 100% !important;
+    height: 48px;
+    font-size: 16px;
+    border-radius: 8px;
+    margin: 8px 0;
+    padding: 0 12px;
+  }
+
+
+
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+
+    .navbar-right {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: var(--Text4);
+      border-top: 2px solid var(--Main);
+    }
+
+    .navbar-right.show {
+      display: flex;
+    }
+
+    .selected {
+      margin: 0;
+      text-align: center;
+      border-radius: 0;
+    }
+
+    .navbar-right .unselected {
+      width: 100%;
+      text-align: center;
+      padding: 12px 0;
+      margin: 0;
+    }
+
+    .profil-header {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .profil-info {
+      flex-direction: column;
+    }
+
+    .profil-avatar {
+      width: 200px;
+      height: 200px;
+      font-size: 80px;
+    }
+
+    .section {
+      margin: 0;
+    }
+
+    .container1 {
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+
+    .profil-header h2 {
+      font-size: 30px;
+    }
+
+    .detail-card p:first-child {
+      font-size: 13px;
+      color: var(--SecondaryGrayed);
+    }
+
+    .detail-card p:last-child {
+      font-size: 15px;
+      font-weight: 500;
+      margin-top: 5px;
+    }
+
+    .Upper {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .Lower {
+      font-size: 13px;
+      color: var(--SecondaryGrayed);
+    }
+
+    .security,
+    .detail-card {
+      font-size: 12px;
+    }
+
+    .logout {
+      width: 100%;
+    }
+  }

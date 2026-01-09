@@ -1,0 +1,53 @@
+:root {
+    --Main: rgb(79, 111, 82);
+    --Main-Transparent: rgba(79, 111, 82, 0.1);
+    --Secondary: #e8dfca;
+    --SecondaryGrayed: #88837a;
+    --Text1: rgba(0, 0, 0, 1);
+    --Text2: rgba(255, 255, 255, 1);
+    --Text3: #4F6F52;
+    --Text4: #1A4D2E;
+    --Text5: #11311e;
+    --Hover1: #719475;
+    --Hover2: #fff;
+}
+
+@font-face {
+    font-family: "Pohon";
+    src: url("../Asset/Fonts/calendar_note_tfb/calendar\ note\ tfb.ttf");
+}
+
+@font-face {
+    font-family: "Orbiga";
+    src: url("../Asset/Fonts/orbiga/Orbiga.ttf");
+}
+
+/*SweetAlert2 Checkmark Color*/
+
+.swal2-icon.swal2-success .swal2-success-ring {
+    border-color: var(--Text4) !important;
+    /* outer ring */
+}
+
+.swal2-icon.swal2-success [class^='swal2-success-line'] {
+    background-color: var(--Text4) !important;
+    /* checkmark lines */
+}
+
+/* Force SweetAlert2 error icon to be pure red (#ff0000) */
+.swal2-icon.swal2-error {
+  border-color: #ff0000 !important;
+}
+
+.swal2-icon.swal2-error .swal2-error-ring {
+  border: 0.25em solid #ff0000 !important;
+}
+
+.swal2-icon.swal2-error .swal2-x-mark {
+  position: relative !important;
+}
+
+.swal2-icon.swal2-error .swal2-x-mark-line-left,
+.swal2-icon.swal2-error .swal2-x-mark-line-right {
+  background-color: #ff0000 !important;
+}
